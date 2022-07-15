@@ -1,16 +1,26 @@
 <template>
   <div id="app">
-    <MyHeader :info = "infoHeader" />
+
+    <header>
+        <MyHeader :info = "infoHeader" />
+    </header>
+
+    <main>
+        <MyMain />
+    </main>
+    
   </div>
 </template>
 
 <script>
 import MyHeader from './components/MyHeader.vue';
+import MyMain from './components/MyMain.vue';
 
 export default {
   name: 'App',
   components: {
-    MyHeader
+    MyHeader,
+    MyMain
   },
   data() {
     return{
@@ -45,7 +55,14 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  height: 1000px;
+}
+header{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
 .container{
   width: 60%;
   margin: 0 auto;
