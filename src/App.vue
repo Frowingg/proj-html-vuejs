@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MyHeader />
+    <MyHeader :info = "infoHeader" />
   </div>
 </template>
 
@@ -11,6 +11,30 @@ export default {
   name: 'App',
   components: {
     MyHeader
+  },
+  data() {
+    return{
+      infoHeader: [
+                    {
+                      text: 'home'
+                    },
+                    {
+                      text: 'about'
+                    },
+                    {
+                      text: 'prices'
+                    },
+                    {
+                      text: 'courses'
+                    },
+                    {
+                      text: 'locations'
+                    },
+                    {
+                      text: 'blog'
+                    },
+                  ]
+    }
   }
 }
 </script>
@@ -21,6 +45,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 .container{
   width: 60%;
   margin: 0 auto;

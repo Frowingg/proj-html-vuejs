@@ -14,17 +14,13 @@
           <img src="../assets/img/avada-drivers-logo-2x-200x39.png" alt="">
 
           <div class="left-header-bottom">
+            
               <nav>
-
                 <ul>
-                  <li>HOME</li>
-                  <li>ABOUT</li>
-                  <li>PRICES</li>
-                  <li>COURSES</li> <span class="tag">NEW</span>
-                  <li>LOCATIONS</li>
-                  <li>BLOG</li>
+                  <li v-for="(singleInfo, i) in info" :key="i">
+                      {{singleInfo.text.toUpperCase()}}
+                  </li>
                 </ul>
-
               </nav>
 
               <button class="btn">
@@ -39,7 +35,8 @@
 
 <script>
 export default {
-
+  name: 'MyHeader',
+  props: ['info'],
 }
 </script>
 
