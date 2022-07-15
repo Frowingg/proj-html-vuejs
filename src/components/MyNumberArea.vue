@@ -15,13 +15,13 @@
 
 <script>
 export default {
-
+    name: 'MyNumberArea'
 }
 </script>
 
 <style lang="scss" scoped>
 #Number-area{
-    height: 150px;
+    height: 180px;
     background-color: #76b162;
     color: white;
 

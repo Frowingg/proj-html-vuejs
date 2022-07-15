@@ -45,7 +45,7 @@
 
 <script>
 export default {
-
+    name: 'MyRegisterArea'
 }
 </script>
 
@@ -53,6 +53,7 @@ export default {
 .reg{
     width: 50%;
     border-radius: 15px;
+    margin: 0 10px;
 }
 .container{
     display: flex;

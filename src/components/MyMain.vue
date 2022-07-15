@@ -6,6 +6,8 @@
 
         <MyNumberArea />
 
+        <MyCoursesArea />
+
     </div>
 </template>
 
@@ -13,6 +15,7 @@
 import MyJumbotron from './MyJumbotron.vue';
 import MyRegisterArea from './MyRegisterArea.vue';
 import MyNumberArea from './MyNumberArea.vue';
+import MyCoursesArea from './MyCoursesArea.vue';
 
 
 export default {
@@ -20,7 +23,8 @@ export default {
     components: {
         MyJumbotron,
         MyRegisterArea,
-        MyNumberArea
+        MyNumberArea,
+        MyCoursesArea
     }
 
 }
