@@ -57,6 +57,7 @@ export default {
 }
 body{
   height: 1000px;
+  color: gray;
 }
 header{
   position: fixed;
