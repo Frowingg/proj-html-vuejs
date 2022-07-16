@@ -50,24 +50,31 @@ export default {
 </script>
 
 <style lang="scss">
+
+// BASE
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  height: 1000px;
-  color: gray;
+
+// COMMON
+.card-base{
+    width: 280px;
+    height: 280px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0 5px;
+    
+    border-top: 6px solid #7abc64;
 }
-header{
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-}
+
 .container{
   width: 60%;
   margin: 0 auto;
 }
+
 .btn{
   background-color: #97b27b;
   color: white;
@@ -76,5 +83,18 @@ header{
   border-radius: 30px;
   font-weight: 900;
   font-size: 11px;
+}
+
+// APP
+header{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+// TEMP
+body{
+  height: 4000px;
+  color: gray;
 }
 </style>

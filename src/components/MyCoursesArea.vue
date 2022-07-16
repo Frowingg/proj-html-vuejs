@@ -35,9 +35,31 @@
 
             </section>
 
-            <section id="courses-per"></section>
+            <section id="courses-per">
 
-            <section id="courses-team"></section>
+                    <div class="card-base">
+                        <div class="circle">
+                            95%
+                        </div>
+                        <p>PASS RATE</p>
+                    </div>
+                    <div class="card-base">
+                        <div class="circle">
+                           100%
+                            
+                        </div>
+                        <p>REFERRAL RATE</p>                    
+                    </div>
+                    <div class="card-base">
+                        <div class="circle">
+                            0%
+                            
+                        </div>
+                        <p>ACCIDENT RATE</p>                    
+                    </div>
+
+            </section>
+
         </div>
     </section>
 </template>
@@ -107,7 +129,52 @@ export default {
             border: 1px solid #7497aa;
             color: #7497aa;
             font-size: 10px;
+            background-color: white;
+        }
+        .lm:hover{
+            color: #97b27b;
+            border:2px solid #97b27b;
         }
     }
+}
+
+// COURSES PERCENTAGE
+#courses-per, #courses-per *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#courses-per {
+    flex-direction: row;
+    .card-base{
+        width: calc(100% / 3);
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    .square-per{
+        width: calc(100% / 3);
+        height: 280px;
+        background-color: pink;
+        margin: 0 5px;
+        padding: 55px;
+    }
+    .circle{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 8px solid #7abc7a;
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    p{
+        font-size: 14px;
+        position: relative;
+        top: 30px
+    }
+
 }
 </style>
