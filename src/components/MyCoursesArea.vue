@@ -1,76 +1,87 @@
 <template>
-    <section id="courses-area">
-        <div class="container">
-            <section id="courses-info">
+    <div class="container">
+        <section id="courses-area">
+            
+                <section id="courses-info">
 
-                <div id="courses-info-left">
-                    <div class="course-card">
-                        <h2>Courses</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quod necessitatibus error eos voluptates eveniet, numquam exercitationem aspernatur suscipit iusto.</p>
-                        <button class="btn">COURSE INFORMATION</button>
-                    </div>
-                </div>
-
-                <div id="courses-info-right">
-                    <div class="img-card">
-                        <div class="img"></div>
-                        <p>Pass Plus</p>
-                        <button class="lm">LEARN MORE</button>
-                    </div>
-
-                    <div class="img-card">
-                        <div class="img"></div>
-                        <p>Intensive Course</p>
-                        <button class="lm">LEARN MORE</button>
-                        
-                    </div>
-
-                    <div class="img-card">
-                        <div class="img"></div>
-                        <p>Instructors</p>
-                        <button class="lm">LEARN MORE</button>
-                        
-                    </div>
-                </div>
-
-            </section>
-
-            <section id="courses-per">
-
-                    <div class="card-base">
-                        <div class="circle">
-                            95%
+                    <div id="courses-info-left">
+                        <div class="course-card">
+                            <h2>Courses</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quod necessitatibus error eos voluptates eveniet, numquam exercitationem aspernatur suscipit iusto.</p>
+                            <button class="btn">COURSE INFORMATION</button>
                         </div>
-                        <p>PASS RATE</p>
                     </div>
-                    <div class="card-base">
-                        <div class="circle">
-                           100%
+
+                    <div id="courses-info-right">
+                        <div class="img-card">
+                            <div class="img"></div>
+                            <p>Pass Plus</p>
+                            <button class="lm">LEARN MORE</button>
+                        </div>
+
+                        <div class="img-card">
+                            <div class="img"></div>
+                            <p>Intensive Course</p>
+                            <button class="lm">LEARN MORE</button>
                             
                         </div>
-                        <p>REFERRAL RATE</p>                    
-                    </div>
-                    <div class="card-base">
-                        <div class="circle">
-                            0%
+
+                        <div class="img-card">
+                            <div class="img"></div>
+                            <p>Instructors</p>
+                            <button class="lm">LEARN MORE</button>
                             
                         </div>
-                        <p>ACCIDENT RATE</p>                    
                     </div>
 
-            </section>
+                </section>
 
-        </div>
-    </section>
+                <section id="courses-per">
+
+                        <div class="card-base">
+                            <div class="circle">
+                                95%
+                            </div>
+                            <p>PASS RATE</p>
+                        </div>
+                        <div class="card-base">
+                            <div class="circle">
+                            100%
+                                
+                            </div>
+                            <p>REFERRAL RATE</p>                    
+                        </div>
+                        <div class="card-base">
+                            <div class="circle">
+                                0%
+                                
+                            </div>
+                            <p>ACCIDENT RATE</p>                    
+                        </div>
+
+                </section>
+
+                <MyInstructorArea />
+        </section>
+    </div>
 </template>
 
 <script>
+import MyInstructorArea from './MyInstructorArea.vue';
+
 export default {
-    name: 'MyCoursesArea'
+    name: 'MyCoursesArea',
+    components: {
+        MyInstructorArea,
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+#courses-area{
+    height: 500px;
+}
+
 #courses-info{
     padding: 50px 0;
     display: flex;

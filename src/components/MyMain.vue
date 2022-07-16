@@ -8,6 +8,8 @@
 
         <MyCoursesArea />
 
+        
+
     </div>
 </template>
 
@@ -18,14 +20,15 @@ import MyNumberArea from './MyNumberArea.vue';
 import MyCoursesArea from './MyCoursesArea.vue';
 
 
+
 export default {
     name: 'MyMain',
     components: {
         MyJumbotron,
         MyRegisterArea,
         MyNumberArea,
-        MyCoursesArea
-    }
+        MyCoursesArea,
+        }
 
 }
 </script>

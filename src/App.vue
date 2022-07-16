@@ -76,7 +76,7 @@ export default {
 }
 
 .btn{
-  background-color: #97b27b;
+  background-color: #7abc64;
   color: white;
   border: none;
   padding: 10px 15px;
