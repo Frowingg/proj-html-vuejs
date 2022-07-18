@@ -8,10 +8,13 @@
 
         <MyCoursesArea :infoCou=infoCour 
                        :infoInstru=infoInstructo
-                       
         />
 
         <MySlider :infoSlid=infoSlide />
+
+        <MyNews :infoNe=infoNew />
+
+        <MyNewsLetter />
 
     </div>
 </template>
@@ -22,6 +25,10 @@ import MyRegisterArea from './MyRegisterArea.vue';
 import MyNumberArea from './MyNumberArea.vue';
 import MyCoursesArea from './MyCoursesArea.vue';
 import MySlider from './MySlider.vue';
+import MyNews from './MyNews.vue';
+import MyNewsLetter from './MyNewsLetter.vue';
+
+
 
 
 
@@ -34,9 +41,12 @@ export default {
         MyNumberArea,
         MyCoursesArea,
         MySlider,
+        MyNews,
+        MyNewsLetter,
+
         
         },
-    props: ['infoCour', 'infoInstructo', 'infoSlide']
+    props: ['infoCour', 'infoInstructo', 'infoSlide', 'infoNew']
            
 
 }

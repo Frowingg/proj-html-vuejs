@@ -8,7 +8,9 @@
     <main>
         <MyMain :infoCour=infoCourses 
                 :infoInstructo=infoInstructors
-                :infoSlide= infoSlider />
+                :infoSlide= infoSlider 
+                :infoNew="infoNews"
+        />
     </main>
     
   </div>
@@ -97,6 +99,20 @@ export default {
                       surname:  'Kelly'
                     }
                   ],
+      infoNews: [
+                  {
+                    title:'What Car to Start With?',
+                    img: 'blog-choosecar-700x441',
+                    comments: '0 comments',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
+                  },
+                  {
+                    title:'Avada Driving School Expanding',
+                    img: 'blogpost-10and2-700x441',
+                    comments: '0 comments',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
+                  }
+                ]
     }
   }
 }
@@ -123,6 +139,7 @@ body{
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 0 5px;
+    text-align: center;
     
     border-top: 6px solid #7abc64;
 }
