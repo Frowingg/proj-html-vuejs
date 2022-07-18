@@ -8,7 +8,7 @@
     <main>
         <MyMain :infoCour=infoCourses 
                 :infoInstructo=infoInstructors
-        />
+                :infoSlide= infoSlider />
     </main>
     
   </div>
@@ -48,40 +48,62 @@ export default {
                   ],
       infoCourses: [
                     {
-                      img: 'courses-passplus-400x399.jpg',
+                      image: 'courses-passplus-400x399.jpg',
                       text: 'Pass Plus'
                     },
                     {
-                      img: 'course-intensive-400x399.jpg',
+                      image: 'course-intensive-400x399.jpg',
                       text: 'Intensive Course'
                     },
                     {
-                      img: 'courses-instructor-400x400.jpg',
+                      image: 'courses-instructor-400x400.jpg',
                       text: 'Instructors'
                     }
                   ],    
       infoInstructors: [
                         {
-                          img : 'instructor-mikehart-600x381',
+                          image : 'instructor-mikehart-600x381',
                           surname: 'Mike Hart'
 
                         },
                         {
-                          img : 'instructor-johnsmith-600x381',
+                          image : 'instructor-johnsmith-600x381',
                           surname: 'Jhon Smith'
                         },
                         {
-                          img : 'instructor-angelahart-600x381',
+                          image : 'instructor-angelahart-600x381',
                           surname: 'Angela Hart'
                         }
                       ],  
+      infoSlider: [
+                    {
+                      image: 'testimonial-sophia',
+                      surname: 'Sophia Jones'
+                    },
+                    {
+                      image: 'testimonial-grant',
+                      surname: 'Grant'
+                    },
+                    {
+                      image: 'testimonial-kate',
+                      surname: 'Kate'
+                    },
+                    {
+                      image: 'testimonial-harold',
+                      isurnamemg: 'Harold'
+                    },
+                    {
+                      image: 'testimonial-kelly',
+                      surname:  'Kelly'
+                    }
+                  ],
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 // BASE
 *{
