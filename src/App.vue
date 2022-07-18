@@ -48,52 +48,52 @@ export default {
                   ],
       infoCourses: [
                     {
-                      image: 'courses-passplus-400x399.jpg',
+                      img: 'courses-passplus-400x399',
                       text: 'Pass Plus'
                     },
                     {
-                      image: 'course-intensive-400x399.jpg',
+                      img: 'course-intensive-400x399',
                       text: 'Intensive Course'
                     },
                     {
-                      image: 'courses-instructor-400x400.jpg',
+                      img: 'courses-instructor-400x400',
                       text: 'Instructors'
                     }
                   ],    
       infoInstructors: [
                         {
-                          image : 'instructor-mikehart-600x381',
+                          img : 'instructor-mikehart-600x381',
                           surname: 'Mike Hart'
 
                         },
                         {
-                          image : 'instructor-johnsmith-600x381',
+                          img : 'instructor-johnsmith-600x381',
                           surname: 'Jhon Smith'
                         },
                         {
-                          image : 'instructor-angelahart-600x381',
+                          img : 'instructor-angelahart-600x381',
                           surname: 'Angela Hart'
                         }
                       ],  
       infoSlider: [
                     {
-                      image: 'testimonial-sophia',
+                      img: 'testimonial-sophia',
                       surname: 'Sophia Jones'
                     },
                     {
-                      image: 'testimonial-grant',
+                      img: 'testimonial-grant',
                       surname: 'Grant'
                     },
                     {
-                      image: 'testimonial-kate',
+                      img: 'testimonial-kate',
                       surname: 'Kate'
                     },
                     {
-                      image: 'testimonial-harold',
+                      img: 'testimonial-harold',
                       isurnamemg: 'Harold'
                     },
                     {
-                      image: 'testimonial-kelly',
+                      img: 'testimonial-kelly',
                       surname:  'Kelly'
                     }
                   ],

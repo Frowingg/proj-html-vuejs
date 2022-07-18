@@ -8,9 +8,10 @@
 
         <MyCoursesArea :infoCou=infoCour 
                        :infoInstru=infoInstructo
+                       
         />
 
-        <MySlider />
+        <MySlider :infoSlid=infoSlide />
 
     </div>
 </template>
@@ -35,7 +36,7 @@ export default {
         MySlider,
         
         },
-    props: ( ['infoCour'], ['infoInstructo'] )
+    props: ['infoCour', 'infoInstructo', 'infoSlide']
            
 
 }

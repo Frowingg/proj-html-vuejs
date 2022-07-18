@@ -15,7 +15,7 @@
                     <div id="courses-info-right">
 
                         <div class="img-card" v-for="(singleInfo, i) in infoCou" :key="i">
-                            <img :src="'../assets/img/'+singleInfo.img" alt="img">
+                            <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="img">
                             <p>{{singleInfo.text}}</p>
                             <button class="lm">LEARN MORE</button>
                         </div>
@@ -61,7 +61,7 @@ import MyInstructorArea from './MyInstructorArea.vue';
 
 export default {
     name: 'MyCoursesArea',
-    props: (['infoCou'],['infoInstru']),
+    props: ['infoCou','infoInstru'],
     components: {
         MyInstructorArea,
     },

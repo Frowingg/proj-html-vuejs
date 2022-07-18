@@ -20,8 +20,7 @@
             <div id="instructor-area-bottom">
                 
                 <div class="card-base" v-for="(singleInfo,i) in infoInst" :key="i">
-                    <img :src="'../assets/img/'+singleInfo.img+'jpg'" alt="img">
-                    <!-- <img src="../assets/img/instructor-angelahart-600x381.jpg" alt=""> -->
+                    <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="img">
                     <div class="info">
                         <h3>{{singleInfo.surname}}</h3>
                         <div class="icons">
@@ -88,10 +87,9 @@ export default {
             padding: 30px;
             text-align: center;
 
-            .img{
+            img{
                 width: 100%;
-                height: 50%;
-                background-color: blueviolet;
+                margin-bottom: 25px;
             }
             .info{
                 height: fit-content;  
