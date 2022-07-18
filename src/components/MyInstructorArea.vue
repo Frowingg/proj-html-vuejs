@@ -7,7 +7,7 @@
                 </div>
                 <div id="my-content">
                     <div id="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugit recusandae iusto magnam suscipit tempora debitis aperiam, perferendis voluptates 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugit recusandae iusto magnam suscipit tempora debitis aperiam, perferendis voluptates.
                     </div>
                     <div id="button">
                         <button class="btn">
@@ -18,54 +18,30 @@
             </div>
 
             <div id="instructor-area-bottom">
-                <div class="card-base">
-                    <div class="img"></div>
+                
+                <div class="card-base" v-for="(singleInfo,i) in infoInst" :key="i">
+                    <img :src="'../assets/img/'+singleInfo.img+'jpg'" alt="img">
+                    <!-- <img src="../assets/img/instructor-angelahart-600x381.jpg" alt=""> -->
                     <div class="info">
-                        <h2>Name Surn</h2>
+                        <h3>{{singleInfo.surname}}</h3>
                         <div class="icons">
                             <i class="fa-brands fa-facebook-f"></i>
                             <i class="fa-brands fa-twitter"></i>
                             <i class="fa-brands fa-instagram"></i>
                         </div>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                    </div>
+                    </div>                   
                 </div>
-                <div class="card-base">
-                    <div class="img"></div>
-                    <div class="info">
-                        <h2>Name Surn</h2>
-                        <div class="icons">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="card-base">
-                    <div class="img"></div>
-                    <div class="info">
-                        <h2>Name Surn</h2>
-                        <div class="icons">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-
                 
             </div>
 
-
         </section>
-
 </template>
 
 <script>
 export default {
     name: 'MyInstructorArea',
+    props: ['infoInst']
 }
 </script>
 
@@ -74,7 +50,7 @@ export default {
 
     #instructor-area-top{
         margin: 100px 0 60px;
-        font-size: 20px;
+        font-size: 18px;
 
         #title{
             margin-bottom: 30px;
@@ -86,7 +62,7 @@ export default {
 
             #text{
                 width: 66%;
-                font-size: 18px;
+                font-size: 15px;
                 line-height: 30px;
             }
             
@@ -120,6 +96,10 @@ export default {
             .info{
                 height: fit-content;  
                 
+                h3{
+                    color: black;
+
+                }
                 
 
                 .icons{
@@ -133,7 +113,8 @@ export default {
                     
                 }
                 p{
-                    line-height: 25px;
+                    line-height: 22px;
+                    font-size: 12px
                 }
             }
         }

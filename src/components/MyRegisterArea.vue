@@ -22,7 +22,7 @@
 
             </div>
 
-            <div class="reg" id="right-reg">
+            <div class="card-base" id="right-reg">
                 <h3>First Lesson Free!</h3>
                 <p>When you make a block booking with us your first lesson is included free.</p>
 
@@ -50,26 +50,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.reg{
-    width: 50%;
-    border-radius: 15px;
-    margin: 0 10px;
-}
 .container{
     display: flex;
 }
+.card-base{
+    width: 50%;
+}
 #left-reg{
+    width: 50%;
+    padding-right: 20px;
     h2{
         margin: 20px 0;
-        color: black;
+        color: #3e3e3e;
     }
     #sub-title{
         line-height: 25px;
         margin-bottom: 30px;
+        font-weight: 300;
     }
     #txt{
         font-size: 13px;
         line-height: 20px;
+        font-weight: 300;
     }
 }
 
@@ -79,27 +81,31 @@ export default {
     position: relative;
     bottom: 115px;
     background-color: white;
-    box-shadow: 10px 10px 5px grey;
-    
+
     h3{
-        color: #97b27b;
+        color: #7abc64;
         font-size: 24px;
     }
 
     p{
         margin: 40px 0;
         font-size: 13px;
+        font-weight: 300;
     }
     
     .input-area{
         display: flex;
         flex-direction: column;
+
+        font-weight: 300;
     }
     .input-area *{ 
         margin-bottom: 20px;
         padding: 8px;
         border-radius: 5px;
         background-color: #f7f7f7;
+
+        font-weight: 300;
     }
 }
 </style>

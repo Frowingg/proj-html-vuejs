@@ -2,11 +2,13 @@
   <div id="app">
 
     <header>
-        <MyHeader :info = "infoHeader" />
+        <MyHeader :infoHead= infoHeader />
     </header>
 
     <main>
-        <MyMain />
+        <MyMain :infoCour=infoCourses 
+                :infoInstructo=infoInstructors
+        />
     </main>
     
   </div>
@@ -43,13 +45,43 @@ export default {
                     {
                       text: 'blog'
                     },
-                  ]
+                  ],
+      infoCourses: [
+                    {
+                      img: 'courses-passplus-400x399.jpg',
+                      text: 'Pass Plus'
+                    },
+                    {
+                      img: 'course-intensive-400x399.jpg',
+                      text: 'Intensive Course'
+                    },
+                    {
+                      img: 'courses-instructor-400x400.jpg',
+                      text: 'Instructors'
+                    }
+                  ],    
+      infoInstructors: [
+                        {
+                          img : 'instructor-mikehart-600x381',
+                          surname: 'Mike Hart'
+
+                        },
+                        {
+                          img : 'instructor-johnsmith-600x381',
+                          surname: 'Jhon Smith'
+                        },
+                        {
+                          img : 'instructor-angelahart-600x381',
+                          surname: 'Angela Hart'
+                        }
+                      ],  
     }
   }
 }
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 // BASE
 *{
@@ -57,11 +89,14 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  font-family: 'Lato', sans-serif;
+}
 
 // COMMON
 .card-base{
     width: 280px;
-    height: 280px;
+    min-height: 280px;
     background-color: white;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -83,6 +118,7 @@ export default {
   border-radius: 30px;
   font-weight: 900;
   font-size: 11px;
+  cursor: pointer;
 }
 
 // APP

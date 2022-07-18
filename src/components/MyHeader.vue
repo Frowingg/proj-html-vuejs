@@ -17,7 +17,7 @@
             
               <nav>
                 <ul>
-                  <li v-for="(singleInfo, i) in info" :key="i">
+                  <li v-for="(singleInfo, i) in infoHead" :key="i">
                       {{singleInfo.text.toUpperCase()}}
                   </li>
                 </ul>
@@ -36,7 +36,7 @@
 <script>
 export default {
   name: 'MyHeader',
-  props: ['info'],
+  props: ['infoHead'],
 }
 </script>
 

@@ -5,7 +5,7 @@
                 <section id="courses-info">
 
                     <div id="courses-info-left">
-                        <div class="course-card">
+                        <div class="card-base">
                             <h2>Courses</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quod necessitatibus error eos voluptates eveniet, numquam exercitationem aspernatur suscipit iusto.</p>
                             <button class="btn">COURSE INFORMATION</button>
@@ -13,25 +13,13 @@
                     </div>
 
                     <div id="courses-info-right">
-                        <div class="img-card">
-                            <div class="img"></div>
-                            <p>Pass Plus</p>
+
+                        <div class="img-card" v-for="(singleInfo, i) in infoCou" :key="i">
+                            <img :src="'../assets/img/'+singleInfo.img" alt="img">
+                            <p>{{singleInfo.text}}</p>
                             <button class="lm">LEARN MORE</button>
                         </div>
 
-                        <div class="img-card">
-                            <div class="img"></div>
-                            <p>Intensive Course</p>
-                            <button class="lm">LEARN MORE</button>
-                            
-                        </div>
-
-                        <div class="img-card">
-                            <div class="img"></div>
-                            <p>Instructors</p>
-                            <button class="lm">LEARN MORE</button>
-                            
-                        </div>
                     </div>
 
                 </section>
@@ -61,7 +49,9 @@
 
                 </section>
 
-                <MyInstructorArea />
+                <section id="instructors-area">
+                    <MyInstructorArea :infoInst=infoInstru />
+                </section>
         </section>
     </div>
 </template>
@@ -71,41 +61,40 @@ import MyInstructorArea from './MyInstructorArea.vue';
 
 export default {
     name: 'MyCoursesArea',
+    props: (['infoCou'],['infoInstru']),
     components: {
         MyInstructorArea,
-    }
+    },
+    
 }
 </script>
 
 <style lang="scss" scoped>
-#courses-area{
-    height: 500px;
-}
-
 #courses-info{
     padding: 50px 0;
     display: flex;
 
     #courses-info-left{
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
         width: 40%;
-        padding: 30px;
-        box-shadow: 10px 10px 5px grey;
+        text-align: center;
         position: relative;
-        bottom: 85px;
-        background-color: white;
-        border-radius: 15px;
+        bottom: 75px;
 
+        .card-base{
+            border-top: none;
+            padding: 30px;
+            width: 100%;
+
+        }
         h2{
-            color: black;
+            color: #3e3e3e;
             font-size: 30px;
         }
         p{
             font-size: 12px;
-            line-height: 30px;
+            line-height: 25px;
             margin: 20px 0;
+            font-weight: 300;
         }
     }
 
@@ -122,10 +111,9 @@ export default {
             flex-direction: column;
             align-items: center;
         }
-        .img{
+        img{
             width: 100%;
             height: 60%;
-            background-color: blue;
             margin-bottom: 15px;
         }
         p{
@@ -135,12 +123,13 @@ export default {
         .lm{
             width: fit-content;
             margin: 0 auto;
-            padding: 5px 10px;
+            padding: 7px 13px;
             border-radius: 25px;
-            border: 1px solid #7497aa;
+            border: 2px solid #7497aa;
             color: #7497aa;
             font-size: 10px;
             background-color: white;
+            cursor: pointer;
         }
         .lm:hover{
             color: #97b27b;

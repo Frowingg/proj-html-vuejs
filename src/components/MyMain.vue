@@ -6,9 +6,11 @@
 
         <MyNumberArea />
 
-        <MyCoursesArea />
+        <MyCoursesArea :infoCou=infoCour 
+                       :infoInstru=infoInstructo
+        />
 
-        
+        <MySlider />
 
     </div>
 </template>
@@ -18,6 +20,8 @@ import MyJumbotron from './MyJumbotron.vue';
 import MyRegisterArea from './MyRegisterArea.vue';
 import MyNumberArea from './MyNumberArea.vue';
 import MyCoursesArea from './MyCoursesArea.vue';
+import MySlider from './MySlider.vue';
+
 
 
 
@@ -28,7 +32,11 @@ export default {
         MyRegisterArea,
         MyNumberArea,
         MyCoursesArea,
-        }
+        MySlider,
+        
+        },
+    props: ( ['infoCour'], ['infoInstructo'] )
+           
 
 }
 </script>
