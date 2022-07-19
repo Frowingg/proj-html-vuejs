@@ -38,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 #my-news{
   background-image: url(../assets/img/latestnews-background.jpg);
+  background-size:cover;
 }
 #border-bottom{
     width: 100%;

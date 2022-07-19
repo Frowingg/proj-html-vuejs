@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
 .container{
     width: 30%;
     text-align: center;
@@ -23,11 +24,14 @@ export default {
 }
 #news-letter{
     background-image: url(../assets/img/newsletter_background.jpg);
+    background-size: cover;
     h2{
-        margin-bottom: 40px
+        margin-bottom: 30px;
+        color: $brand_title_color
     }
     input{
-        width: 100%
+        width: 100%;
+        height: 35px;
     }
     button{
         width: 100%;

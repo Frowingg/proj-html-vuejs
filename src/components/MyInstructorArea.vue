@@ -45,6 +45,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card-base:hover img{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+        }
 #instructor-area{
 
     #instructor-area-top{
@@ -87,6 +90,7 @@ export default {
             padding: 30px;
             text-align: center;
 
+        
             img{
                 width: 100%;
                 margin-bottom: 25px;

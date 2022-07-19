@@ -76,12 +76,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
 .container{
     display: flex;
     justify-content: space-between;
 }
 p{
-    color: white;
     font-size: 10px;
     line-height: 20px;
 }
@@ -90,7 +90,7 @@ i{
     font-size: 13px;
 }
 a{
-    color: white;
+    color: $brand_text_color;
     font-size: 10px;
     text-decoration: none;
 }
@@ -105,6 +105,7 @@ a{
 
 #footer-top{
     background-image: url(../assets/img/footer-background-color.jpg);
+    background-size: cover;
     padding: 50px 0;
 
     .col{
