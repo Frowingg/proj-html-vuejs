@@ -42,12 +42,17 @@ export default {
 }
 #border-bottom{
     width: 100%;
+    position: relative;
+    top: -30px;
+    left: 5px
 }
 .card-base{
   width: 100%;
   border-color: #799aae;
   border-bottom-left-radius:0px;
   border-bottom-right-radius:0px;
+  position: relative;
+  top: -30px;
   .news-content{
     display: flex;
     justify-content: space-between;

@@ -1,51 +1,71 @@
 <template>
-    <div class="container">
+    
         <section id="courses-area">
             
                 <section id="courses-info">
+                    <div class="container">
+                        <div id="courses-info-left">
+                            <div class="card-base">
+                                <img src="../assets/img/new-corner.jpg" alt="img">
+                                <h2>Courses</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quod necessitatibus error eos voluptates eveniet, numquam exercitationem aspernatur suscipit iusto.</p>
+                                <button class="btn">COURSE INFORMATION</button>
+                            </div>
+                        </div>                  
 
-                    <div id="courses-info-left">
-                        <div class="card-base">
-                            <img src="../assets/img/new-corner.jpg" alt="img">
-                            <h2>Courses</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quod necessitatibus error eos voluptates eveniet, numquam exercitationem aspernatur suscipit iusto.</p>
-                            <button class="btn">COURSE INFORMATION</button>
+                        <div id="courses-info-right">
+                            <div class="img-card" v-for="(singleInfo, i) in infoCou" :key="i">
+                                <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="img">
+                                <p>{{singleInfo.text}}</p>
+                                <button class="lm">LEARN MORE</button>
+                            </div>
                         </div>
                     </div>
-
-                    <div id="courses-info-right">
-
-                        <div class="img-card" v-for="(singleInfo, i) in infoCou" :key="i">
-                            <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="img">
-                            <p>{{singleInfo.text}}</p>
-                            <button class="lm">LEARN MORE</button>
-                        </div>
-
-                    </div>
-
                 </section>
 
                 <section id="courses-per">
 
                         <div class="card-base">
-                            <div class="circle">
-                                95%
+                            <div class="box">
+                                <div class="percent">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>95 <span>%</span> </h2>
+                                    </div>
+                                </div>
+                                <h2 class="text">PASS RATE</h2>
                             </div>
-                            <p>PASS RATE</p>
                         </div>
                         <div class="card-base">
-                            <div class="circle">
-                            100%
-                                
+                            <div class="box">
+                                <div class="percent">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>100 <span>%</span> </h2>
+                                    </div>
+                                </div>
+                                <h2 class="text">REFERRAL RATE</h2>
                             </div>
-                            <p>REFERRAL RATE</p>                    
                         </div>
                         <div class="card-base">
-                            <div class="circle">
-                                0%
-                                
+                            <div class="box">
+                                <div class="percent">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2>0 <span>%</span> </h2>
+                                    </div>
+                                </div>
+                                <h2 class="text">ACCIDENT RATE</h2>
                             </div>
-                            <p>ACCIDENT RATE</p>                    
                         </div>
 
                 </section>
@@ -54,7 +74,7 @@
                     <MyInstructorArea :infoInst=infoInstru />
                 </section>
         </section>
-    </div>
+    
 </template>
 
 <script>
@@ -72,10 +92,14 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/variable.scss';
-
+.container{
+    display: flex;
+}
 #courses-info{
     padding: 50px 0;
-    display: flex;
+    background-image: url('../assets/img/promise-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 
     #courses-info-left{
         width: 40%;
@@ -157,35 +181,74 @@ export default {
     justify-content: center;
 }
 
+#courses-per .card-base:nth-child(2) .box .percent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 100)/ 100);
+}
+#courses-per .card-base:nth-child(3) .box .percent svg circle:nth-child(2){
+        stroke-dashoffset: calc(440 - (440 * 1)/ 100);
+    }
 #courses-per {
-    flex-direction: row;
-    .card-base{
-        width: calc(100% / 3);
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-    }
-    .square-per{
-        width: calc(100% / 3);
-        height: 280px;
-        margin: 0 5px;
-        padding: 55px;
-    }
-    .circle{
+    .box{
+        position: relative;
         width: 100%;
         height: 100%;
-        border-radius: 50%;
-        border: 8px solid #7abc7a;
-        font-size: 40px;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-
+        background: white;
     }
-    p{
-        font-size: 14px;
+    .box .percent{
         position: relative;
-        top: 30px
+        width: 150px;
+        height: 150px;
     }
-
+    .box .percent svg{
+        position: relative;
+        width: 150px;
+        height: 150px;
+    }
+    .box .percent svg circle{
+        width: 150px;
+        height: 150px;
+        fill: none;
+        stroke-width: 7;
+        stroke: #000;
+        transform: translate(5px,5px);
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+        stroke-linecap: round;
+    }
+    .box .percent svg circle:nth-child(1){
+        stroke-dashoffset: 0;
+        stroke: #f3f3f3;
+    }
+    .box .percent svg circle:nth-child(2){
+        stroke-dashoffset: calc(440 - (440 * 95)/ 100);
+        stroke: $brand_main_color;
+    }
+    .box .percent .number{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box .percent .number h2{
+        font-size: 35px;
+        font-weight: 400;
+    }
+    .box .percent .number h2 span{
+        font-size: 24px;
+    }
+    .box .text{
+        padding: 10px 0 0;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
 }
 </style>

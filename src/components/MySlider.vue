@@ -50,7 +50,6 @@ export default {
 }
 .container{
     width: 40%;
-    height: 400px;
     text-align: center;
     padding: 30px;
     display: flex;

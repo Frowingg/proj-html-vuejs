@@ -30,6 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
 #jumbotron{
     width: 100%;
     height: 600px;
@@ -62,7 +63,7 @@ export default {
     #squares{
         right: 0;
         top: 100px;
-        z-index: 2;
+        z-index: 3;
         position: fixed;
 
         .square{
@@ -80,7 +81,8 @@ export default {
             cursor: pointer;
 
             i{
-                font-size: 20px
+                font-size: 20px;
+                color: $brand_title_color
             }
 
             p{

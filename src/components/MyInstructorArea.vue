@@ -1,39 +1,39 @@
 <template>
         <section id="instructor-area">
-
-            <div id="instructor-area-top">
-                <div id="title">
-                    <h2>Your Instructors</h2>
-                </div>
-                <div id="my-content">
-                    <div id="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugit recusandae iusto magnam suscipit tempora debitis aperiam, perferendis voluptates.
+            <div class="container">
+                <div id="instructor-area-top">
+                    <div id="title">
+                        <h2>Your Instructors</h2>
                     </div>
-                    <div id="button">
-                        <button class="btn">
-                            MORE ABOUT US
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div id="instructor-area-bottom">
-                
-                <div class="card-base" v-for="(singleInfo,i) in infoInst" :key="i">
-                    <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="img">
-                    <div class="info">
-                        <h3>{{singleInfo.surname}}</h3>
-                        <div class="icons">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-instagram"></i>
+                    <div id="my-content">
+                        <div id="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugit recusandae iusto magnam suscipit tempora debitis aperiam, perferendis voluptates.
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                    </div>                   
+                        <div id="button">
+                            <button class="btn">
+                                MORE ABOUT US
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                
-            </div>
 
+                <div id="instructor-area-bottom">
+                    
+                    <div class="card-base" v-for="(singleInfo,i) in infoInst" :key="i">
+                        <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="img">
+                        <div class="info">
+                            <h3>{{singleInfo.surname}}</h3>
+                            <div class="icons">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        </div>                   
+                    </div>
+                    
+                </div>
+            </div>
         </section>
 </template>
 
@@ -45,17 +45,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
 .card-base:hover img{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
         }
 #instructor-area{
 
     #instructor-area-top{
-        margin: 100px 0 60px;
+        margin: 100px 0 5px;
         font-size: 18px;
 
         #title{
             margin-bottom: 30px;
+            color: $brand_title_color;
         }
 
         #my-content{
@@ -84,11 +86,14 @@ export default {
     
     #instructor-area-bottom{
         display: flex;
+        position: relative;
+        top:70px;
 
         .card-base{
             height: 340px;
             padding: 30px;
             text-align: center;
+            z-index: 2;
 
         
             img{

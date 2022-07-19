@@ -153,7 +153,7 @@ export default {
 // APP
 header{
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
 }
 
