@@ -1,8 +1,10 @@
 <template>
     <section id="jumbotron">
         <div class="container">
-            <h1>Drive with Avada</h1>
-            <p>We offer the finest driving tuition money can buy</p>
+            <div id="header-content">
+                <h1>Drive with Avada</h1>
+                <p>We offer the finest driving tuition money can buy</p>
+            </div>
         </div>
 
         <div id="squares">
@@ -32,7 +34,9 @@ export default {
     width: 100%;
     height: 600px;
     background-image: url('../assets/img/homepage-hero-background.jpg');
-    background-size: cover;
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:-150px;
     position: relative;
     top: -90px;
     .container{
@@ -41,7 +45,12 @@ export default {
         justify-content:center;
         height: 100%;
         color: white;
+        position: relative;
 
+        #header-content{
+            position: relative;
+            top: 90px
+        }
         h1{
             font-size: 40px;
         }
@@ -51,15 +60,16 @@ export default {
     }
 
     #squares{
-        position: absolute;
         right: 0;
-        top: 220px;
-        z-index: 1;
+        top: 100px;
+        z-index: 2;
+        position: fixed;
 
         .square{
             width: 50px;
             height: 50px;
             background-color: white;
+            margin-right: 10px;
             margin-bottom: 5px;
             border-radius: 5px;
             display: flex;

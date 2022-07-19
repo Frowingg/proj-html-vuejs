@@ -6,6 +6,7 @@
 
                     <div id="courses-info-left">
                         <div class="card-base">
+                            <img src="../assets/img/new-corner.jpg" alt="img">
                             <h2>Courses</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quod necessitatibus error eos voluptates eveniet, numquam exercitationem aspernatur suscipit iusto.</p>
                             <button class="btn">COURSE INFORMATION</button>
@@ -70,6 +71,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
+
 #courses-info{
     padding: 50px 0;
     display: flex;
@@ -84,6 +87,15 @@ export default {
             border-top: none;
             padding: 30px;
             width: 100%;
+            position: relative;
+
+            img{
+                position: absolute;
+                width: 55px;
+                top: 0;
+                left: 0;
+                border-top-left-radius: 15px;
+            }
 
         }
         h2{
@@ -125,15 +137,15 @@ export default {
             margin: 0 auto;
             padding: 7px 13px;
             border-radius: 25px;
-            border: 2px solid #7497aa;
-            color: #7497aa;
+            border: 2px solid $brand_text_color;
+            color: $brand_text_color;
             font-size: 10px;
             background-color: white;
             cursor: pointer;
         }
         .lm:hover{
-            color: #97b27b;
-            border:2px solid #97b27b;
+            color: $brand_main_color;
+            border:2px solid $brand_main_color;
         }
     }
 }
@@ -156,7 +168,6 @@ export default {
     .square-per{
         width: calc(100% / 3);
         height: 280px;
-        background-color: pink;
         margin: 0 5px;
         padding: 55px;
     }

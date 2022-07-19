@@ -20,10 +20,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
+
 #Number-area{
-    height: 180px;
-    background-color: #76b162;
+    background-image: url('../assets/img/horizontal-cta-background.jpg');
+    background-size:cover;
     color: white;
+    padding: 60px 0;
 
     .container{
         display: flex;

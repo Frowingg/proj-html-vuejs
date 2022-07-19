@@ -50,6 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
 .container{
     display: flex;
 }
@@ -61,7 +62,7 @@ export default {
     padding-right: 20px;
     h2{
         margin: 20px 0;
-        color: #3e3e3e;
+        color: $brand_title_color;
     }
     #sub-title{
         line-height: 25px;
@@ -76,14 +77,11 @@ export default {
 }
 
 #right-reg{
-    text-align: center;
-    padding: 40px 30px;
     position: relative;
     bottom: 115px;
-    background-color: white;
 
     h3{
-        color: #7abc64;
+        color: $brand_main_color;
         font-size: 24px;
     }
 

@@ -17,8 +17,9 @@
             
               <nav>
                 <ul>
-                  <li v-for="(singleInfo, i) in infoHead" :key="i">
-                      {{singleInfo.text.toUpperCase()}}
+                  <li v-for="(singleInfo, i) in infoHead" :key="i" :class="{'active-nav' : currentElement === i}">
+                      {{singleInfo.text.toUpperCase()}} 
+                      <div class="tag" :class="{'active-tag': singleInfo.tag}">NEW</div>
                   </li>
                 </ul>
               </nav>
@@ -37,10 +38,17 @@
 export default {
   name: 'MyHeader',
   props: ['infoHead'],
+  data() {
+    return{
+      currentElement: 0
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
+
 .container{
     display: flex;
     justify-content: space-between;
@@ -61,16 +69,16 @@ export default {
 .header-bottom{
     display: flex;
     height: 90px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.3);
 
     .left-header-bottom{
         display: flex;
 
         ul{
-            list-style-type: none;
             display: flex;
 
             li{
+                cursor: pointer;
                 margin-right: 20px;
                 color: white;
                 font-size: 11px;
@@ -79,22 +87,30 @@ export default {
                 display: flex;
                 align-items: center;
             }
+            .active-nav{
+              color: $brand_main_color;
+              border-bottom: 3px solid $brand_main_color;
+            }
             li:hover{
-                color: #97b27b;
-                border-bottom: 3px solid #97b27b;
+                color: $brand_main_color;
+                border-bottom: 3px solid $brand_main_color;
             }
           }
 
         .tag{
+          display: none;
           font-size: 7px;
           font-weight: 900;
           color: white;
-          background-color: #97b27b;
+          background-color: $brand_main_color;
           height: min-content;
           padding: 4px;
           position: relative;
-          right: 15px;
-          top:7px;
+          right: -7px;
+          top:1px;
+        }
+        .active-tag{
+          display: block;
         }
     }
 }

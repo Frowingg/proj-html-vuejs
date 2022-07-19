@@ -37,22 +37,28 @@ export default {
     return{
       infoHeader: [
                     {
-                      text: 'home'
+                      text: 'home',
+                      tag: false
                     },
                     {
-                      text: 'about'
+                      text: 'about',
+                      tag: false
                     },
                     {
-                      text: 'prices'
+                      text: 'prices',
+                      tag: false
                     },
                     {
-                      text: 'courses'
+                      text: 'courses',
+                      tag: true,
                     },
                     {
-                      text: 'locations'
+                      text: 'locations',
+                      tag: false
                     },
                     {
-                      text: 'blog'
+                      text: 'blog',
+                      tag: false
                     },
                   ],
       infoCourses: [
@@ -141,46 +147,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
-// BASE
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  font-family: 'Lato', sans-serif;
-}
-
-// COMMON
-.card-base{
-    width: 280px;
-    min-height: 280px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 0 5px;
-    text-align: center;
-    
-    border-top: 6px solid #7abc64;
-}
-
-.container{
-  width: 60%;
-  margin: 0 auto;
-}
-
-.btn{
-  background-color: #7abc64;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 30px;
-  font-weight: 900;
-  font-size: 11px;
-  cursor: pointer;
-}
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import './style/common.scss';
 
 // APP
 header{
@@ -189,9 +157,4 @@ header{
   width: 100%;
 }
 
-// TEMP
-body{
-  height: 4000px;
-  color: gray;
-}
 </style>
