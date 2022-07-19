@@ -9,22 +9,29 @@
         <MyMain :infoCour=infoCourses 
                 :infoInstructo=infoInstructors
                 :infoSlide= infoSlider 
-                :infoNew="infoNews"
+                :infoNew=infoNews
         />
     </main>
     
+    <footer>
+      <MyFooter :footerConte=footerContent />
+    </footer>
+
   </div>
 </template>
 
 <script>
 import MyHeader from './components/MyHeader.vue';
 import MyMain from './components/MyMain.vue';
+import MyFooter from './components/MyFooter.vue';
+
 
 export default {
   name: 'App',
   components: {
     MyHeader,
-    MyMain
+    MyMain,
+    MyFooter
   },
   data() {
     return{
@@ -112,7 +119,22 @@ export default {
                     comments: '0 comments',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
                   }
-                ]
+                ],
+      footerContent: [
+                      {
+                        logo: 'avada-drivers-logo-2x-200x39',
+                        text: 'Avada Driving School is the right choice for experienced drivers looking for a refresher course, or the brand new driver wanting to pass first time.',                    
+                        address: '12345 North Main Street, New York, NY 555555',
+                        tel: '1.800.555.6789',
+                        email_address: 'info@your-domain.com',
+                        site_link: 'Theme-Fusion.com',                      
+                        pass_plus_link: 'Pass_Plus',
+                        intensive_course_link: 'Intensive Course',
+                        automatic_link: 'Automatic',
+                        instructor_training_link: 'Instructor Training',
+                        footerImg: 'footer-ad-grid'
+                      }
+                     ]
     }
   }
 }

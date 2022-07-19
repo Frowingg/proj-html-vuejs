@@ -1,5 +1,10 @@
 <template>
     <section id="jumbotron">
+        <div class="container">
+            <h1>Drive with Avada</h1>
+            <p>We offer the finest driving tuition money can buy</p>
+        </div>
+
         <div id="squares">
             <div class="square">
                 <i class="fa-solid fa-folder-plus"></i>
@@ -26,11 +31,24 @@ export default {
 #jumbotron{
     width: 100%;
     height: 600px;
-    background-image: url('../assets/img/driving_preview-600x450.jpg');
-    background-repeat: no-repeat;
+    background-image: url('../assets/img/homepage-hero-background.jpg');
     background-size: cover;
     position: relative;
     top: -90px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        height: 100%;
+        color: white;
+
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
 
     #squares{
         position: absolute;
