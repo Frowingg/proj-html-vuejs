@@ -72,6 +72,7 @@
 
                 </section>
 
+                <!-- INSTRUCTORS AREA -->
                 <section id="instructors-area">
                     <MyInstructorArea :infoInstructors=infoInstructors />
                 </section>

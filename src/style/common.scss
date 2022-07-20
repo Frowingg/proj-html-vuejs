@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import './variable.scss';
 
-// BASE
+// RESET
 *{
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ i{
 
 // COMMON
 .card-base{
-    width: 280px;
+    min-width: 280px;
     min-height: 280px;
     background-color: white;
     border-radius: 15px;

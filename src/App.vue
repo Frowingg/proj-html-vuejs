@@ -2,7 +2,7 @@
   <div id="app">
 
     <header>
-        <MyHeader :infoHeader= infoHeader />
+        <MyHeader :infoHeader=infoHeader />
     </header>
 
     <main>
