@@ -2,19 +2,19 @@
   <div id="app">
 
     <header>
-        <MyHeader :infoHead= infoHeader />
+        <MyHeader :infoHeader= infoHeader />
     </header>
 
     <main>
-        <MyMain :infoCour=infoCourses 
-                :infoInstructo=infoInstructors
-                :infoSlide= infoSlider 
-                :infoNew=infoNews
+        <MyMain :infoCourses=infoCourses 
+                :infoInstructors=infoInstructors
+                :infoSlider=infoSlider 
+                :infoNews=infoNews
         />
     </main>
     
     <footer>
-      <MyFooter :footerConte=footerContent />
+      <MyFooter :footerContent=footerContent />
     </footer>
 
   </div>
@@ -78,16 +78,18 @@ export default {
       infoInstructors: [
                         {
                           img : 'instructor-mikehart-600x381',
-                          surname: 'Mike Hart'
-
+                          surname: 'Mike Hart',
+                          text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
                         },
                         {
                           img : 'instructor-johnsmith-600x381',
-                          surname: 'Jhon Smith'
+                          surname: 'Jhon Smith',
+                          text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
                         },
                         {
                           img : 'instructor-angelahart-600x381',
-                          surname: 'Angela Hart'
+                          surname: 'Angela Hart',
+                          text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
                         }
                       ],  
       infoSlider: [
@@ -116,12 +118,14 @@ export default {
                   {
                     title:'What Car to Start With?',
                     img: 'blog-choosecar-700x441',
+                    date: 'Febrary 7th 2019',
                     comments: '0 comments',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
                   },
                   {
                     title:'Avada Driving School Expanding',
                     img: 'blogpost-10and2-700x441',
+                    date: 'Febrary 7th 2019',
                     comments: '0 comments',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
                   }
@@ -130,10 +134,15 @@ export default {
                       {
                         logo: 'avada-drivers-logo-2x-200x39',
                         text: 'Avada Driving School is the right choice for experienced drivers looking for a refresher course, or the brand new driver wanting to pass first time.',                    
+                        house_icon: 'fa-solid fa-house-chimney',
                         address: '12345 North Main Street, New York, NY 555555',
+                        tel_icon: 'fa-solid fa-phone-flip',
                         tel: '1.800.555.6789',
+                        email_address_icon: 'fa-regular fa-envelope',
                         email_address: 'info@your-domain.com',
-                        site_link: 'Theme-Fusion.com',                      
+                        site_link_icon: 'fa-solid fa-link',
+                        site_link: 'Theme-Fusion.com',   
+                        courses_icon: 'fa-regular fa-circle-right',                   
                         pass_plus_link: 'Pass_Plus',
                         intensive_course_link: 'Intensive Course',
                         automatic_link: 'Automatic',
@@ -147,7 +156,6 @@ export default {
 </script>
 
 <style lang="scss">
-// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import './style/common.scss';
 
 // APP

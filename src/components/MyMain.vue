@@ -6,13 +6,13 @@
 
         <MyNumberArea />
 
-        <MyCoursesArea :infoCou=infoCour 
-                       :infoInstru=infoInstructo
+        <MyCoursesArea :infoCourses=infoCourses  
+                       :infoInstructors=infoInstructors
         />
 
-        <MySlider :infoSlid=infoSlide />
+        <MySlider :infoSlider=infoSlider />
 
-        <MyNews :infoNe=infoNew />
+        <MyNews :infoNews=infoNews />
 
         <MyNewsLetter />
 
@@ -46,7 +46,7 @@ export default {
 
         
         },
-    props: ['infoCour', 'infoInstructo', 'infoSlide', 'infoNew']
+    props: ['infoCourses', 'infoInstructors', 'infoSlider', 'infoNews']
            
 
 }

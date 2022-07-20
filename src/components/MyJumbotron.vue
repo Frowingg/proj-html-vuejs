@@ -69,7 +69,7 @@ export default {
         .square{
             width: 50px;
             height: 50px;
-            background-color: white;
+            background-color: #f3f3f3;
             margin-right: 10px;
             margin-bottom: 5px;
             border-radius: 5px;

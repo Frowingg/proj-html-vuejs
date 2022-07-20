@@ -19,7 +19,7 @@
 
                 <div id="instructor-area-bottom">
                     
-                    <div class="card-base" v-for="(singleInfo,i) in infoInst" :key="i">
+                    <div class="card-base" v-for="(singleInfo,i) in infoInstructors" :key="i">
                         <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="img">
                         <div class="info">
                             <h3>{{singleInfo.surname}}</h3>
@@ -28,7 +28,7 @@
                                 <i class="fa-brands fa-twitter"></i>
                                 <i class="fa-brands fa-instagram"></i>
                             </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                            <p>{{singleInfo.text}} </p>
                         </div>                   
                     </div>
                     
@@ -40,15 +40,15 @@
 <script>
 export default {
     name: 'MyInstructorArea',
-    props: ['infoInst']
+    props: ['infoInstructors']
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../style/variable.scss';
 .card-base:hover img{
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
-        }
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
 #instructor-area{
 
     #instructor-area-top{
@@ -104,7 +104,7 @@ export default {
                 height: fit-content;  
                 
                 h3{
-                    color: black;
+                    color: $brand_title_color;
 
                 }
                 

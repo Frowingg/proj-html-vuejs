@@ -17,7 +17,7 @@
             
               <nav>
                 <ul>
-                  <li v-for="(singleInfo, i) in infoHead" :key="i" :class="{'active-nav' : currentElement === i}">
+                  <li v-for="(singleInfo, i) in infoHeader" :key="i" :class="{'active-nav' : currentElement === i}">
                       {{singleInfo.text.toUpperCase()}} 
                       <div class="tag" :class="{'active-tag': singleInfo.tag}">NEW</div>
                   </li>
@@ -37,7 +37,7 @@
 <script>
 export default {
   name: 'MyHeader',
-  props: ['infoHead'],
+  props: ['infoHeader'],
   data() {
     return{
       currentElement: 0
@@ -82,7 +82,7 @@ export default {
                 margin-right: 20px;
                 color: white;
                 font-size: 11px;
-                font-weight: 900;
+                font-weight: 700;
                 height: 30px;
                 display: flex;
                 align-items: center;
@@ -108,6 +108,7 @@ export default {
           position: relative;
           right: -7px;
           top:1px;
+          border-radius: 3px;
         }
         .active-tag{
           display: block;

@@ -50,6 +50,7 @@ export default {
     }
     p{
         font-size: 25px;
+        margin-right:40px
     }
 }
 </style>

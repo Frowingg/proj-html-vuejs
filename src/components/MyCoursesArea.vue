@@ -1,7 +1,8 @@
 <template>
     
         <section id="courses-area">
-            
+                
+                <!-- COURSES INFO -->
                 <section id="courses-info">
                     <div class="container">
                         <div id="courses-info-left">
@@ -14,7 +15,7 @@
                         </div>                  
 
                         <div id="courses-info-right">
-                            <div class="img-card" v-for="(singleInfo, i) in infoCou" :key="i">
+                            <div class="img-card" v-for="(singleInfo, i) in infoCourses " :key="i">
                                 <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="img">
                                 <p>{{singleInfo.text}}</p>
                                 <button class="lm">LEARN MORE</button>
@@ -23,6 +24,7 @@
                     </div>
                 </section>
 
+                <!-- COURSES PERCENTAGE -->
                 <section id="courses-per">
 
                         <div class="card-base">
@@ -71,7 +73,7 @@
                 </section>
 
                 <section id="instructors-area">
-                    <MyInstructorArea :infoInst=infoInstru />
+                    <MyInstructorArea :infoInstructors=infoInstructors />
                 </section>
         </section>
     
@@ -82,7 +84,7 @@ import MyInstructorArea from './MyInstructorArea.vue';
 
 export default {
     name: 'MyCoursesArea',
-    props: ['infoCou','infoInstru'],
+    props: ['infoCourses','infoInstructors'],
     components: {
         MyInstructorArea,
     },
@@ -123,7 +125,7 @@ export default {
 
         }
         h2{
-            color: #3e3e3e;
+            color: $brand_title_color;
             font-size: 30px;
         }
         p{
@@ -153,7 +155,7 @@ export default {
             margin-bottom: 15px;
         }
         p{
-            color: #7497aa;
+            color: $brand_text_color;
             margin-bottom: 10px;
         }
         .lm{

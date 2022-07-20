@@ -8,11 +8,11 @@
             
               <div class="news-content">
 
-                  <div class="news-card" v-for="(singleInfo, i) in infoNe" :key="i">
+                  <div class="news-card" v-for="(singleInfo, i) in infoNews" :key="i">
                       <img :src="require('../assets/img/'+singleInfo.img+'.jpg')" alt="">
                       <div class="title">{{singleInfo.title}}</div>
-                      <div class="date">Febr 7th | <span>0 comments</span></div>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                      <div class="date">{{singleInfo.date}} <span>|</span> <span>{{singleInfo.comments}}</span></div>
+                      <p>{{singleInfo.text}}</p>
                   </div>
               </div>
 
@@ -31,11 +31,13 @@
 <script>
 export default {
     name: 'MyNews',
-    props: ['infoNe']
+    props: ['infoNews']
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
+
 #my-news{
   background-image: url(../assets/img/latestnews-background.jpg);
   background-size:cover;
@@ -44,7 +46,7 @@ export default {
     width: 100%;
     position: relative;
     top: -30px;
-    left: 5px
+    left: 6px
 }
 .card-base{
   width: 100%;
@@ -53,6 +55,9 @@ export default {
   border-bottom-right-radius:0px;
   position: relative;
   top: -30px;
+  h2{
+    color: $brand_title_color;
+  }
   .news-content{
     display: flex;
     justify-content: space-between;
@@ -60,22 +65,23 @@ export default {
     padding: 30px;
     .news-card{
       width: 48%;
-      // padding: 40px;
-
       img{
         width: 100%;
       }
       .title{
-        color: #7abc64;
+        color: $brand_main_color;
         font-weight: 700;
         margin: 10px 0;
+      }
+      .date span:first-child{
+        margin: 0 3px;
       }
       .date{
         font-size: 10px;
         margin-bottom: 20px;
 
         span{
-          color: #7abc64;
+          color: $brand_main_color;
           font-size: 9px;
         }
       }

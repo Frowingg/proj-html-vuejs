@@ -2,7 +2,7 @@
     <footer>
         
         <section id="footer-top">
-            <div class="container" v-for="(infoFoot, i) in footerConte" :key="i">
+            <div class="container" v-for="(infoFoot, i) in footerContent" :key="i">
 
                 <div class="col" >
                     <img :src="require('../assets/img/'+infoFoot.logo+'.png')" alt="logo-img">
@@ -13,16 +13,16 @@
                     <h3>CONTACT DETAILS</h3>
                     <ul id="info">
                         <li>
-                            <i class="fa-solid fa-house-chimney"></i><p> {{infoFoot.address}}</p>
+                            <i :class="infoFoot.house_icon"></i><p> {{infoFoot.address}}</p>
                         </li>
                         <li>
-                            <i class="fa-solid fa-phone"></i><p>{{infoFoot.tel}}</p>
+                            <i :class="infoFoot.tel_icon"></i><p>{{infoFoot.tel}}</p>
                         </li>
                         <li>
-                            <i class="fa-solid fa-envelope"></i> <a href="#">{{infoFoot.email_address}}</a>
+                            <i :class="infoFoot.email_address_icon"></i> <a href="#">{{infoFoot.email_address}}</a>
                         </li>
                         <li>
-                            <i class="fa-solid fa-link"></i> <a href="#">{{infoFoot.site_link}}</a>
+                            <i :class="infoFoot.site_link_icon"></i> <a href="#">{{infoFoot.site_link}}</a>
                         </li>
                     </ul>
                 </div>
@@ -31,16 +31,16 @@
                     <h3>COURSES</h3>
                     <ul id="courses">
                         <li>
-                            <i class="fa-solid fa-circle-right"></i><a href="#">{{infoFoot.pass_plus_link}}</a>
+                            <i :class="infoFoot.courses_icon"></i><a href="#">{{infoFoot.pass_plus_link}}</a>
                         </li>
                         <li>
-                            <i class="fa-solid fa-circle-right"></i><a href="#">{{infoFoot.intensive_course_link}}</a>
+                            <i :class="infoFoot.courses_icon"></i><a href="#">{{infoFoot.intensive_course_link}}</a>
                         </li>
                         <li>
-                            <i class="fa-solid fa-circle-right"></i><a href="#">{{infoFoot.automatic_link}}</a>
+                            <i :class="infoFoot.courses_icon"></i><a href="#">{{infoFoot.automatic_link}}</a>
                         </li>
                         <li>
-                            <i class="fa-solid fa-circle-right"></i><a href="#">{{infoFoot.instructor_training_link}}</a>
+                            <i :class="infoFoot.courses_icon"></i><a href="#">{{infoFoot.instructor_training_link}}</a>
                         </li>
                     </ul>
                 </div>
@@ -71,7 +71,7 @@
 <script>
 export default {
     name: 'MyFooter',
-    props: ['footerConte']
+    props: ['footerContent']
 }
 </script>
 
@@ -144,7 +144,7 @@ a{
     
     #fb-left{
         a{
-            color: #7abc64;
+            color: $brand_main_color;
         }
     }
 }

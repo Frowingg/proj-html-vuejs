@@ -27,7 +27,7 @@
                 <p>When you make a block booking with us your first lesson is included free.</p>
 
                 <div class="input-area">
-                    <input type="text" placeholder="Your Name*">
+                    <input type="text" placeholder="Your Name*" id="img"> 
                     <input type="email" placeholder="Email*">
                     <input type="tel" placeholder="Telephone">
                     <input type="text" placeholder="Location">
@@ -94,16 +94,16 @@ export default {
     .input-area{
         display: flex;
         flex-direction: column;
-
-        font-weight: 300;
     }
     .input-area *{ 
         margin-bottom: 20px;
         padding: 8px;
         border-radius: 5px;
         background-color: #f7f7f7;
-
-        font-weight: 300;
     }
+}
+#img {
+    background: white url(../assets/img/image.png) right no-repeat;
+    background-position: right 4px bottom 7px;
 }
 </style>
